@@ -25,7 +25,8 @@
         status.innerText = "❌ Invalid JSON. Please check and try again.";
         return;
       }
-
+      console.log(jsonData)
+      
       try {
         const response = await fetch("https://thiagoa012.app.n8n.cloud/webhook/gpt-to-jira", {
           method: "POST",
