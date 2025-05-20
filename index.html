@@ -7,49 +7,7 @@
 <body>
   <h2>Formulário para criar card no JIRA</h2>
   <textarea id="jsonInput" rows="20" cols="80" placeholder='{
-  "title": "Disable PayPal as Payment Method for Customers in the Netherlands",
-  "context": "Data shows that approximately 14% of customers in the Netherlands face issues when selecting PayPal during checkout. This contributes negatively to both the success rate and customer retention.",
-  "objective": "Prevent customers located in the Netherlands from selecting PayPal as a payment method, in order to reduce payment friction and lower churn.",
-  "scope": [
-    "Identify customer location based on IP or account settings",
-    "Hide PayPal option in the checkout flow for customers in the Netherlands",
-    "Maintain PayPal visibility and functionality in all other countries"
-  ],
-  "out_of_scope": [
-    "Modifying the PayPal SDK integration",
-    "Changes to non-checkout flows"
-  ],
-  "acceptance_criteria": [
-    {
-      "scenario": "User in the Netherlands proceeds to checkout",
-      "given": "the user is located in the Netherlands",
-      "when": "they reach the payment method selection screen",
-      "then": "the PayPal option should not be displayed"
-    },
-    {
-      "scenario": "User in another country proceeds to checkout",
-      "given": "the user is located outside the Netherlands",
-      "when": "they reach the payment method selection screen",
-      "then": "the PayPal option should be displayed as usual"
-    }
-  ],
-  "technical_requirements": [
-    "Update payment method eligibility logic in the frontend and backend",
-    "Geo-targeting based on IP or user profile locale",
-    "Validate fallback behavior for edge cases (e.g. VPN, incorrect geolocation)",
-    "Add monitoring for disabled payment options per region"
-  ],
-  "design": "No visual updates needed unless fallback UI is required.",
-  "metrics": [
-    "% of users in the Netherlands seeing PayPal option (should drop to 0%)",
-    "Checkout success rate in the Netherlands before vs. after change",
-    "Customer support tickets related to payment issues"
-  ],
-  "dependencies": [
-    "Backend support to filter payment options by country",
-    "QA validation for geo-specific flows",
-    "Approval from Legal/Compliance if necessary due to geo-targeting"
-  ]
+ 
 }
 '></textarea>
   <br>
